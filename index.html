@@ -14,9 +14,36 @@
 </header>
 
 <main>
-    <button class="add-book">Add Book +</button>
-    <div class="container">
-        
+
+    <!-- form to add book info -->
+    <div class="form">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title">
+
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author">
+
+        <label for="pages">Number of Pages</label>
+        <input type="number" name="pages" id="pages">
+
+        <label for="read">Read</label>
+        <input type="checkbox" name="read" id="read">
+
+        <button class="add-book">Add Book</button>
+    </div>
+    <!-- container for books -->
+    <div class="book-shelf">
+        <div class="top-shelf">
+            <p class="empty">Add a book by clicking above</p>
+            <ul class="graph-header">
+                <li class="headings">Title</li>
+                <li class="headings">Author</li>
+                <li class="headings"># of Pages</li>
+                <li class="headings">Read</li>
+                <li class="headings">Delete</li>
+            </ul>
+        </div>
+        <div class="bottom-shelf"></div>
     </div>
 </main>
 
