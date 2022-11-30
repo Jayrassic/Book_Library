@@ -10,19 +10,6 @@ makeCheckbox.setAttribute(`type`,`checkbox`);
 // Library array stores book information
 let myLibrary = [];
 
-function boxMake(check) {
-    const makeCheckbox = document.createElement(`input`);
-    makeCheckbox.setAttribute(`type`,`checkbox`);
-    makeCheckbox.className= `madeCheckbox`; 
-
-    if (check === true) {
-        boxMake()
-       makeCheckbox.checked = true;
-    }
-
-    info.append(makeCheckbox);
-}
-
 // placeBook is called early in document so that it can set the appropriate shelf test on page load. See th placeBook function below for more information.
 placeBook();
 
