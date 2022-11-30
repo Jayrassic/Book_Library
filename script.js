@@ -4,7 +4,6 @@ const emptyShelf = document.querySelector(`.empty`);
 const topShelf = document.querySelector(`.top-shelf`);
 const bottomShelf = document.querySelector(`.bottom-shelf`);
 const graphHeader = document.querySelector(`.graph-header`);
-const button = document.createElement(`button`);
 
 // Library array stores book information
 let myLibrary = [];
@@ -46,24 +45,41 @@ function addBook () {
 function placeBook () {
     if (myLibrary.length === 0) {
         graphHeader.style.display = `none`
+        emptyShelf.style.display = `block`
+        bottomShelf.textContent = ``;
     } else {
         graphHeader.style.display = `block`
         emptyShelf.style.display = `none`
         bottomShelf.textContent = ``;
-        myLibrary.forEach((book)  => {
+        
+        myLibrary.forEach((book,i)  => {
             const novel = document.createElement(`ul`);
+            novel.className = `book${i}`
             bottomShelf.appendChild(novel)
             for(object in book) {
                 let info = document.createElement('li');
                 novel.appendChild(info);
                 info.append(book[object]);
             }
+            const button = document.createElement(`button`);
+            button.className = `madeBtn`
+            button.id = `button${i}`;
             novel.appendChild(button);
             button.textContent = `delete`
         })
     }
 };
 
-function removeBook() {
-    
+document.addEventListener(`click`, removeBook);
+
+// this function looks is associated with the click event listener above. Since the button class .makeBtn is not present at page load, it cannot have a querySelector. Function checks class name and if .makeBtn, it grabs the index number from the button and splices it from myLibrary.
+function removeBook(event) {
+    let remover = event.target
+    let index =``;
+    if (remover.className === `madeBtn`) {
+        index = remover.id.slice(-1)
+        console.log(index);
+        myLibrary.splice(index,1);
+        placeBook();
+    }    
 }
