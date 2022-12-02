@@ -1,6 +1,89 @@
+root {
+    font-size: 16px;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 5%;
+    width: 80%;
+}
+
+h1 {
+    color: white;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 2rem;
+}
+
+.input-box{
+    display: flex;
+    gap: .5rem;
+}
+
+.book-shelf {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-shelf>p{
+  text-align: center;
+}
+
+.graph-header {
+    align-self: none;
+    display: grid;
+    grid-template-columns: repeat(2,3fr) repeat(3,1fr);
+    background-color: darkgray;
+    border-top: 1px solid black;
+    border-radius: 5px 5px 0 0;
+
+}
+
+.empty {
+    font-size: 1.5rem;
+}
+
+.bottom-shelf > ul{
+    display: grid;
+    grid-template-columns: repeat(2,3fr) repeat(3,1fr);
+}
+
+.bottom-shelf>ul:nth-child(even) {
+    background-color: rgb(209, 206, 206);
+}
+
+.bottom-shelf>ul:last-child {
+    border-bottom: 1px solid black;
+    border-radius: 0 0 5px 5px;
+}
+
+ul {
+    padding: 5px;
+    list-style: none;
+    border-left: 1px solid black ;
+    border-right: 1px solid black;
+}
+
+.bottom-shelf>li:nth-child(4){
+    justify-content: center;
 }
