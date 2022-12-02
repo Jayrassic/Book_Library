@@ -17,24 +17,32 @@
 
     <!-- form to add book info -->
     <div class="form">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title">
+        <div class="input-box">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+        </div>
 
-        <label for="author">Author</label>
-        <input type="text" name="author" id="author">
+        <div class="input-box">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+        </div>
 
-        <label for="pages">Number of Pages</label>
-        <input type="number" name="pages" id="pages">
+        <div class="input-box">
+            <label for="pages">Number of Pages</label>
+            <input type="number" name="pages" id="pages">
+        </div>
 
-        <label for="read">Read</label>
-        <input type="checkbox" name="read" id="read">
+        <div class="input-box">
+            <label for="read">Read</label>
+            <input type="checkbox" name="read" id="read">
+        </div>
 
         <button class="add-book">Add Book</button>
     </div>
     <!-- container for books -->
     <div class="book-shelf">
-        <div class="top-shelf">
-            <p class="empty">Add a book by clicking above</p>
+        <div class="top-shelf"> <!-- Used for template information-->
+            <p class="empty">Add a book by filling out the information above.</p>
             <ul class="graph-header">
                 <li class="headings">Title</li>
                 <li class="headings">Author</li>
@@ -43,6 +51,7 @@
                 <li class="headings">Delete</li>
             </ul>
         </div>
+        <!-- Used for added books-->
         <div class="bottom-shelf"></div>
     </div>
 </main>
