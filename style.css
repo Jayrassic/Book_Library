@@ -1,10 +1,11 @@
 root {
-    font-size: 16px;
+    font-size: 18px;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Tinos', serif;
 }
 
 body{
@@ -19,12 +20,14 @@ header {
     justify-content: center;
     align-items: center;
     background-color: black;
-    padding: 5%;
-    width: 80%;
+    padding: 4rem;
+    width: 100%;
 }
 
 h1 {
     color: white;
+    font-family: 'Rock Salt', cursive;
+    font-size: 3rem;
 }
 
 .form {
@@ -56,7 +59,8 @@ h1 {
     background-color: darkgray;
     border-top: 1px solid black;
     border-radius: 5px 5px 0 0;
-
+    font-style: italic;
+    font-size: 1.2rem;
 }
 
 .empty {
@@ -84,6 +88,39 @@ ul {
     border-right: 1px solid black;
 }
 
+li {
+    text-justify:inter-word
+}
+
 .bottom-shelf>li:nth-child(4){
     justify-content: center;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    height: 1.3rem;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: rgb(99, 99, 99);
+}
+
+button:active {
+    transform:scale(1.1);
+    background-color: black; 
+}
+
+.add-book{
+    width: 100px;
+}
+
+.madeBtn {
+    width: 50%;
+}
+
+input[type="checkbox"] {
+   accent-color: black;
 }
