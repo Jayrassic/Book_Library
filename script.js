@@ -16,18 +16,18 @@ const pagesError = document.querySelector("#pages-error");
 
 makeCheckbox.setAttribute(`type`, `checkbox`);
 
-// console.log(Object.values(form));
+// Generates error message
+function showError(element) {
+  element.textContent = "Please fill out this section";
+  element.className = "error-box active-error";
+}
+// Clears error message
+function clearError(element) {
+  element.textContent = "";
+  element.className = "error-box";
+}
 
-// Object.values(form).forEach((element) => {
-//   let error = element.id + "Error";
-//   console.log(error);
-//   if (element.validity.valueMissing === false) {
-//     showError(error);
-//   } else {
-//     clearError(error);
-//   }
-// });
-
+// Will test for an error and show or dismiss the error message
 function errorMessageTest(input, output) {
   if (input.validity.valueMissing) {
     showError(output);
@@ -35,17 +35,6 @@ function errorMessageTest(input, output) {
     clearError(output);
   }
 }
-
-function showError(element) {
-  element.textContent = "Please fill out this section";
-  element.className = "error-box active-error";
-}
-
-function clearError(element) {
-  element.textContent = "";
-  element.className = "error-box";
-}
-
 // Library array stores book information
 let myLibrary = [];
 
